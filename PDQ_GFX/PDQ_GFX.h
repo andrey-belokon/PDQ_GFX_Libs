@@ -157,8 +157,8 @@ public:
 	static inline uint8_t getRotation() __attribute__ ((always_inline))		{ return rotation; }
 	static inline coord_t getCursorX() __attribute__ ((always_inline))		{ return cursor_x; }
 	static inline coord_t getCursorY() __attribute__ ((always_inline))		{ return cursor_y; }
-	static inline void getTextBounds(char *string, coord_t x, coord_t y, int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
-	static inline void getTextBounds(const __FlashStringHelper *s, coord_t x, coord_t y, int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
+	static void getTextBounds(char *string, coord_t x, coord_t y, int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
+	static void getTextBounds(const __FlashStringHelper *s, coord_t x, coord_t y, int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
 
 	virtual size_t write(uint8_t);		// used by Arduino "Print.h" (and the one required virtual function)
 
